@@ -1,0 +1,31 @@
+Write a script that runs three commands:
+
+Evaluate an arithmetic expression:
+Ans:
+
+#!/bin/sh
+
+a=10
+b=20
+
+val=`expr $a + $b`
+echo "a + b : $val"
+echo $?
+
+Attempt to remove a file that does not exist in the current directory
+Ans:
+
+rm ./path/to/the/file/file_1.txt
+echo $?
+
+Evaluate another arithmetic expression
+Ans:
+
+x=30
+y=5
+
+val=`expr $a \* $b`
+echo "a * b : $val"
+echo $?
+
+Immediately after each command, echo the exit status of that command to the terminal using the appropriate variable to show success and failure exit codes.

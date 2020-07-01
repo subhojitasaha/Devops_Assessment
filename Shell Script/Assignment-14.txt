@@ -1,0 +1,17 @@
+Develop a simple three item menu to display on the terminal. Your script, upon display of the menu, should prompt the user to choose one of the three available options. Using the 'case' statement from the course, display three unique messages depending on which number they chose, with a catch all message letting them know if they went outside the bounds of instructions.
+
+Ans-
+
+#!/bin/sh
+echo "Biriyani Pizza Kebabs"  
+read FOOD 
+case "$FOOD" in
+   Biriyani) echo "Great Choice." 
+   ;;
+   Pizza) echo "Yummy Italian!" 
+   ;;
+   Kebabs) echo "Wonderful, it's our specialty!" 
+   ;;
+   *) echo "Sorry, That's not on the Menu!" 
+   ;;
+esac

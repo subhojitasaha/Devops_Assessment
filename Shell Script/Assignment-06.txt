@@ -1,0 +1,44 @@
+Write a script that evaluates and displays the following arithmetic operations:
+
+Add two numbers:
+Ans:
+
+#!/bin/sh
+
+a=10
+b=20
+
+val=`expr $a + $b`
+echo "a + b : $val"
+
+Add two numbers and multiply by a third, do not group anything 
+Ans:
+
+a=5
+b=10
+c=2
+
+x=`expr $a + $b`
+echo "a + b : $x"
+
+y=`expr $x \* $c`
+echo "(a + b)* c : $y"
+
+
+Add two numbers, grouped (changing order of precedence) and multiply by a third
+Ans:
+
+a=5
+b=10
+c=2
+
+x=`expr $a + $b \* $c`
+
+y=`expr $b \* $c`
+echo "b * c : $y"
+
+x=`expr $a + $y`
+echo "a + b * c : $x"
+
+
+Keep in mind special characters and/or escape characters as needed.
