@@ -1,0 +1,18 @@
+Create a simple text file containing a list of names (superheroes) and name it whatever you wish, should contain at least four values, one per line.
+
+Write a script that will use a file descriptor defined for both reading and writing to that file (pick an appropriate number greater than the system reserved handles as talked about in the course). Filtering that file into an appropriate loop, display all values with that file. Finally, once complete, write a message with the time/date stamp to the file and close the descriptor.
+
+Ans- 
+
+#!/bin/sh
+echo "Iron Man" > superheroes.txt
+echo "Black Widow" >> superheroes.txt
+echo "Captain America" >> superheroes.txt
+echo "Hulk" >> superheroes.txt
+while read p; do
+  echo "$p"
+done <superheroes.txt
+current_date=$(date "+%d.%m.%y")
+echo "Current Date : $current_date"
+current_time=$(date "+%H.%M.%S")
+echo "Current Time : $current_time"
