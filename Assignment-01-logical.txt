@@ -1,0 +1,29 @@
+Search online for the Python documentation for the len() function. It will be on a web page titled “Built-in Functions.” Skim the list of other functions Python has, look up what the round() function does, and experiment with it in the interactive shell.
+
+
+
+Look up the round() and abs() functions on the Internet, and find out what they do. Experiment with them in the interactive shell.
+
+Ans- 
+
+Len Function - The len() function returns the number of items (length) in an object.
+
+eg- testList = [1, 2, 3]
+print(testList, 'length is', len(testList))
+
+Output: [1, 2, 3] length is 3
+
+Round Function - The round() function returns a floating-point number rounded to the specified number of decimals.
+
+eg- print(round(10.7))
+
+Output: 11
+
+
+Abs Function - The abs() method returns the absolute value of the given number. If the number is a complex number, abs() returns its magnitude.
+
+eg- integer = -20
+	print('Absolute value of -20 is:', abs(integer))
+	
+Output: Absolute value of -20 is: 20
+
