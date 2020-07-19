@@ -1,0 +1,50 @@
+Your company is ready to start using Docker on some of their servers. In order to get started, they want you to set up and configure Docker CE on a server 
+that has already been set up. You will need to make sure that the server meets the following specifications:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Docker CE is installed and running on the server. 
+Ans- 
+apt-get update 
+- updates the list of available packages and their versions, but it does not install or upgrade any packages
+
+
+Install docker with below command. Bionic version is not available in katacoda hence xenial version is used.
+sudo apt install -y docker-ce
+
+Once it is installed, verify if the Docker service is started with command:
+systemctl status docker
+
+
+run the following command to start it if not alreday started:
+systemctl start docker
+
+Check docker version:
+'docker -v' to get verion and build  and 'docker info' to get detailed information
+
+Any non-root user has permission to run docker commands.
+
+
+Add the docker group if it doesn't already exist:
+sudo groupadd docker
+
+Add the connected user "$USER" to the docker group:
+sudo gpasswd -a $USER docker
+
+
+
+The default logging driver is set to syslog.
+To configure the Docker daemon to default to a specific logging driver, set the value of log-driver to the name of the logging driver in the daemon.json file,
+
+{
+  "log-driver": "syslog",
+  "log-opts": {
+    "syslog-address": "udp://1.2.3.4:1111"
+  }
+}
+
+To find the current default logging driver for the Docker daemon
+docker info --format '{{.LoggingDriver}}'
+
+
+[NOTE: Write the series of commands to achieve above in this file below the question scenario with documentation]
+
+Good luck!
